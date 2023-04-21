@@ -143,7 +143,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,12 +187,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (3)
+      value: MoleHole8
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1001 &85514175
@@ -248,12 +252,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (8)
+      value: MoleHole6
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1001 &127295964
@@ -265,7 +273,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -309,12 +317,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (7)
+      value: MoleHole3
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1 &131462986
@@ -375,7 +387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Argh a bomb!
+  m_text: Bomb! Game Over~
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -397,7 +409,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -509,10 +521,10 @@ RectTransform:
   m_Father: {fileID: 789304116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &238230052
 MonoBehaviour:
@@ -858,7 +870,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -902,12 +914,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (4)
+      value: MoleHole5
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1 &668992749
@@ -1518,7 +1534,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,12 +1578,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (5)
+      value: MoleHole2
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1 &1189218484
@@ -1628,7 +1648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Game!
+  m_text: Play Game~
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1650,13 +1670,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1849,7 +1869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1893,12 +1913,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (2)
+      value: MoleHole7
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1001 &1816105667
@@ -1910,7 +1934,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1954,12 +1978,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (6)
+      value: MoleHole0
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!114 &1824817404 stripped
@@ -2014,15 +2042,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moles:
-  - {fileID: 237298822}
-  - {fileID: 411319637}
-  - {fileID: 274228869}
-  - {fileID: 1949290708}
-  - {fileID: 27617478}
-  - {fileID: 865001119}
-  - {fileID: 165880721}
   - {fileID: 874257271}
+  - {fileID: 411319637}
+  - {fileID: 27617478}
   - {fileID: 1824817404}
+  - {fileID: 237298822}
+  - {fileID: 1949290708}
+  - {fileID: 165880721}
+  - {fileID: 274228869}
+  - {fileID: 865001119}
   playButton: {fileID: 238230050}
   gameUI: {fileID: 2042081735}
   outOfTimeText: {fileID: 1237251498}
@@ -2097,12 +2125,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole (1)
+      value: MoleHole1
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
 --- !u!1 &2042081735
@@ -2154,7 +2186,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201373, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2198,11 +2230,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867566201375, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: m_Name
-      value: MoleHole
+      value: MoleHole4
       objectReference: {fileID: 0}
     - target: {fileID: 1614671867789996472, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1985219925}
+    - target: {fileID: 1614671867789996474, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}
+      propertyPath: m_Name
+      value: Mole4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7de3e3b2703e5479e1c4e7cc3af062, type: 3}

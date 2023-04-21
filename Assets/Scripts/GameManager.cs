@@ -33,6 +33,15 @@ public class GameManager : MonoBehaviour {
       moles[i].Hide();
       moles[i].SetIndex(i);
     }
+    moles[0].SetKey(KeyCode.Q);
+    moles[1].SetKey(KeyCode.W);
+    moles[2].SetKey(KeyCode.E);
+    moles[3].SetKey(KeyCode.A);
+    moles[4].SetKey(KeyCode.S);
+    moles[5].SetKey(KeyCode.D);
+    moles[6].SetKey(KeyCode.Z);
+    moles[7].SetKey(KeyCode.X);
+    moles[8].SetKey(KeyCode.C);
     // Remove any old game state.
     currentMoles.Clear();
     // Start with 30 seconds.

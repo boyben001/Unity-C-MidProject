@@ -35,6 +35,7 @@ public class Mole : MonoBehaviour {
   private float bombRate = 0f;
   private int lives;
   private int moleIndex = 0;
+  private KeyCode moleKey;
 
   private IEnumerator ShowHide(Vector2 start, Vector2 end) {
     // Make sure we start at the start.
@@ -133,6 +134,38 @@ public class Mole : MonoBehaviour {
         default:
           break;
       }
+      // switch (moleType) {
+      //   case MoleType.Standard:
+      //     spriteRenderer.sprite = moleHit;
+      //     gameManager.AddScore(moleIndex);
+      //     // Stop the animation
+      //     StopAllCoroutines();
+      //     StartCoroutine(QuickHide());
+      //     // Turn off hittable so that we can't keep tapping for score.
+      //     hittable = false;
+      //     break;
+      //   case MoleType.HardHat:
+      //     // If lives == 2 reduce, and change sprite.
+      //     if (lives == 2) {
+      //       spriteRenderer.sprite = moleHatBroken;
+      //       lives--;
+      //     } else {
+      //       spriteRenderer.sprite = moleHatHit;
+      //       gameManager.AddScore(moleIndex);
+      //       // Stop the animation
+      //       StopAllCoroutines();
+      //       StartCoroutine(QuickHide());
+      //       // Turn off hittable so that we can't keep tapping for score.
+      //       hittable = false;
+      //     }
+      //     break;
+      //   case MoleType.Bomb:
+      //     // Game over, 1 for bomb.
+      //     gameManager.GameOver(1);
+      //     break;
+      //   default:
+      //     break;
+      // }
     }
   }
 
@@ -197,6 +230,10 @@ public class Mole : MonoBehaviour {
   // Used by the game manager to uniquely identify moles. 
   public void SetIndex(int index) {
     moleIndex = index;
+  }
+
+  public void SetKey(KeyCode key){
+    moleKey = key;
   }
 
   // Used to freeze the game on finish.
