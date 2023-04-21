@@ -101,19 +101,8 @@ public class Mole : MonoBehaviour {
 
   private void OnMouseDown() {
     if (hittable) {
-      // if(Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.E) 
-      //     || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)
-      //     || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C)){
-      //     }
-
       switch (moleType) {
         case MoleType.Standard:
-          if(Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.E) 
-          || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)
-          || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C))
-          {
-            
-          }          
           spriteRenderer.sprite = moleHit;
           gameManager.AddScore(moleIndex);
           // Stop the animation
