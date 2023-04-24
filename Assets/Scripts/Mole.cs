@@ -37,6 +37,7 @@ public class Mole : MonoBehaviour {
   private int moleIndex = 0;
   private KeyCode[] moleKey;
 
+
   private IEnumerator ShowHide(Vector2 start, Vector2 end) {
     // Make sure we start at the start.
     transform.localPosition = start;
@@ -98,54 +99,6 @@ public class Mole : MonoBehaviour {
     if (!hittable) {
       Hide();
     }
-  }
-
-  private void detect1P(){
-    if (hittable && Input.GetKeyDown(moleKey[0])) {
-      OnKeyDown(1);
-    }
-  }
-  private void detect2P(){
-    if (hittable && Input.GetKeyDown(moleKey[1])) {
-      OnKeyDown(2);
-    }
-  }
-  private void OnKeyDown(int player) {
-      switch (moleType) {
-        case MoleType.Standard:
-          spriteRenderer.sprite = moleHit;
-          if (player == 1) gameManager.AddScore(1, moleIndex);
-          else gameManager.AddScore(2, moleIndex);
-          // Stop the animation
-          StopAllCoroutines();
-          StartCoroutine(QuickHide());
-          // Turn off hittable so that we can't keep tapping for score.
-          hittable = false;
-          break;
-        case MoleType.HardHat:
-          // If lives == 2 reduce, and change sprite.
-          if (lives == 2) {
-            spriteRenderer.sprite = moleHatBroken;
-            lives--;
-          } else {
-            spriteRenderer.sprite = moleHatHit;
-            if (player == 1) gameManager.AddScore(1, moleIndex);
-            else gameManager.AddScore(2, moleIndex);
-            // Stop the animation
-            StopAllCoroutines();
-            StartCoroutine(QuickHide());
-            // Turn off hittable so that we can't keep tapping for score.
-            hittable = false;
-          }
-          break;
-        case MoleType.Bomb:
-          // Game over, 1 for bomb.
-          gameManager.GameOver(1);
-          break;
-        default:
-          break;
-      }
-    
   }
 
   private void CreateNext() {
@@ -210,18 +163,64 @@ public class Mole : MonoBehaviour {
   public void SetIndex(int index) {
     moleIndex = index;
   }
-
-  public void SetKey(KeyCode[] key){
-    moleKey = new KeyCode[] {key[0], key[1]};
-  }
-
+  
   // Used to freeze the game on finish.
   public void StopGame() {
     hittable = false;
     StopAllCoroutines();
   }
 
-
+   public void SetKey(KeyCode[] key){
+    moleKey = new KeyCode[] {key[0], key[1]};
+  }
+   
+  private void detect1P(){
+    if (hittable && Input.GetKeyDown(moleKey[0]) && gameManager.currentMoles.Contains(gameManager.moles[moleIndex])) {        
+      OnKeyDown(1);
+    }
+  }
+  private void detect2P(){
+    if (hittable && Input.GetKeyDown(moleKey[1]) && gameManager.currentMoles.Contains(gameManager.moles[moleIndex])) {      
+      OnKeyDown(2);  
+    }
+  }
+  private void OnKeyDown(int player) {
+      switch (moleType) {
+        case MoleType.Standard:
+          spriteRenderer.sprite = moleHit;
+          if (player == 1) gameManager.AddScore(1, moleIndex);
+          else if (player == 2) gameManager.AddScore(2, moleIndex);
+          // Stop the animation
+          StopAllCoroutines();
+          StartCoroutine(QuickHide());
+          // Turn off hittable so that we can't keep tapping for score.
+          hittable = false;
+          break;
+        case MoleType.HardHat:
+          // If lives == 2 reduce, and change sprite.
+          if (lives == 2) {
+            spriteRenderer.sprite = moleHatBroken;
+            lives--;
+          } else {
+            spriteRenderer.sprite = moleHatHit;
+            if (player == 1) gameManager.AddScore(1, moleIndex);
+            else if (player == 2) gameManager.AddScore(2, moleIndex);
+            // Stop the animation
+            StopAllCoroutines();
+            StartCoroutine(QuickHide());
+            // Turn off hittable so that we can't keep tapping for score.
+            hittable = false;
+          }
+          break;
+        case MoleType.Bomb:
+          // Game over, 1 for bomb.
+          gameManager.GameOver(1);
+          break;
+        default:
+          break;
+      }
+    
+  }
   void Update() {
     if (gameManager.playing) {
       detect1P();
