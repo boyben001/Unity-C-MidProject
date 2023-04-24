@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
+    if(Input.GetKeyDown("escape")){
+      Application. Quit();
+    }
     if (!playing){
       for (int i = 0; i < moles.Count; i++) {
         moles[i].Hide();
